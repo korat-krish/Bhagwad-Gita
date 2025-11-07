@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="background">
+  <!-- Chapter Detail Modal -->
+  <div class="modal fade" id="chapterModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="chapterTitle"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="chapterBody"></div>
+        <div class="modal-footer d-flex justify-content-between">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="viewVersesBtn">View Verses</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Verses Modal -->
+  <!-- <div class="modal fade" id="verseModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="verseTitle"></h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body overflow-auto" id="verseBody"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+  <header class="bg-primary">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-2">
+          <div class="logo">
+            <img src="./image/logo.png" alt="logo" class="img-fluid w-50">
+          </div>
+        </div>
+        <div class="col-8 d-flex justify-content-center align-items-center">
+          <h2 class="text-white">
+            Welcome To Bhagwad Gita
+          </h2>
+        </div>
+        <div class="col-2">
+          <div class="logo">
+            <img src="./image/logo.png" alt="logo" class="img-fluid w-50">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="banner">
+      <div class="container">
+        <div class="row">
+          <div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="p-2">
+      <div class="container">
+        <div class="d-flex justify-content-center align-items-center">
+          <h3>
+             All Chapters
+          </h3>
+        </div>
+        <div id="chdata" class="d-flex flex-wrap justify-content-center"></div>
+        <div class="detail-modal"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="text-center text-lg-start text-light pt-4" style="background: linear-gradient(135deg, #6a1a1a, #f4a261);">
+  <div class="container p-4">
+    <div class="row">
+      <!-- About -->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase fw-bold mb-3">📖 Bhagavad Gita</h5>
+        <p>
+          “Whenever dharma declines and the purpose of life is forgotten, 
+          I manifest myself on earth.” — Bhagavad Gita 4.7  
+          <br><br>
+          Explore the divine teachings of Lord Krishna and walk on the path of wisdom, devotion, and karma.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <!-- <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase fw-bold mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#home" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="#chapters" class="text-light text-decoration-none">Chapters</a></li>
+          <li><a href="#teachings" class="text-light text-decoration-none">Teachings</a></li>
+          <li><a href="#about" class="text-light text-decoration-none">About</a></li>
+        </ul>
+      </div> -->
+
+      <!-- Contact -->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase fw-bold mb-3">Contact</h5>
+        <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i>Surat, Gujarat, India</p>
+        <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i>koratkrish1@gmail.com</p>
+        <p><i class="bi bi-phone-fill me-2"></i>+91 87804 30036</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-center">
+        <h5 class="text-uppercase fw-bold mb-3">Follow Us</h5>
+        <a href="#" class="text-light me-3 fs-4"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/krish_korat_511/?hl=en" class="text-light me-3 fs-4"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-light me-3 fs-4"><i class="bi bi-youtube"></i></a>
+        <a href="#" class="text-light fs-4"><i class="bi bi-twitter-x"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center p-3 border-top border-light" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2025 Bhagavad Gita | Designed with ❤️ by Krish Korat
+  </div>
+</footer>
+
+<!-- Bootstrap Icons CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <div class="modal fade" id="versesModal" tabindex="-1" aria-labelledby="versesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="versesModalLabel">Chapter Verses</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="vermodal-body overflow-auto" id="verseContainer">
+       
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
