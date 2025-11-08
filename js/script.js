@@ -8,7 +8,7 @@ function getData() {
       let str = "";
       data.forEach(element => {
         str += `
-          <div class="col-5 p-2 chapter-name bg-secondary m-2 text-center rounded" style="cursor:pointer !important;" onclick="showdetail(${element.chapter_number})">
+          <div class="col-lg-5 p-2 chapter-name bg-secondary m-2 text-center rounded" style="cursor:pointer !important;" onclick="showdetail(${element.chapter_number})">
             ${element.chapter_number} : ${element.name} (${element.translation})
           </div>
         `;
@@ -54,36 +54,6 @@ function showdetail(chapter_number) {
 function closeModal() {
   detailModal.innerHTML = "";
 }
-
-// function show_Verses(chapter_number,verses_count)
-// {
-//   closeModal();
-//   for(let i=1; i<=chapter_number; i++)
-//   {
-//     for(let j=1; j<=verses_count; j++)
-//     {
-//       fetch(`https://vedicscriptures.github.io/slok/${i}/${j}/`).then 
-//       (response => response.json()).then 
-//       (data => 
-//       {
-//         let str = 
-//         `
-//           <div class="verse p-3 mb-3 border rounded">
-
-//             <p><strong>Meaning (HI):</strong> ${data.slok}</p>  
-//         `;
-        
-//         // Show the modal
-//         let versesModal = new bootstrap.Modal(document.getElementById('versesModal'));
-//         versesModal.show();
-//         versesModal.innerHTML = str;
-//       }).catch
-//       (err => console.log(err));
-//     }
-//   }
-
-// }
-
 
 function show_Verses(chapter_number, verses_count) {
   closeModal();
